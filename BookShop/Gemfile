@@ -56,3 +56,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'solargraph', '~> 0.39.12'
 gem 'erb_lint', '~> 0.0.34'
 gem 'auto_html', '~> 2.0'
+gem 'bootstrap', '~> 4.5'
+gem 'jquery-rails', '~> 4.4'

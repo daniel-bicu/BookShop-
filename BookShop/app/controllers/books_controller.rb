@@ -1,8 +1,10 @@
 class BooksController < ApplicationController
   def index
+    @books = Book.all
   end
 
   def show
+    @book = Book.find(params[:name])
   end
 
   def new
@@ -11,7 +13,5 @@ class BooksController < ApplicationController
   def edit
   end
 
-  def newController
-    @books = Book.all
-  end
+
 end

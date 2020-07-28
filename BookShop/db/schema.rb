@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2020_07_28_111254) do
     t.string "data"
     t.string "avalaibility"
     t.string "published_data"
+    t.string "url"
     t.text "description"
     t.decimal "price", precision: 2, default: "0"
     t.datetime "created_at", precision: 6, null: false
