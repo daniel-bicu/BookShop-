@@ -10,4 +10,8 @@ class BooksController < ApplicationController
 
   def edit
   end
+
+  def newController
+    @books = Book.all
+  end
 end

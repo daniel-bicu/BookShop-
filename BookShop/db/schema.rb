@@ -17,8 +17,10 @@ ActiveRecord::Schema.define(version: 2020_07_28_111254) do
 
   create_table "books", force: :cascade do |t|
     t.string "name"
+    t.string "author"
     t.string "data"
     t.string "avalaibility"
+    t.string "published_data"
     t.text "description"
     t.decimal "price", precision: 2, default: "0"
     t.datetime "created_at", precision: 6, null: false
