@@ -10,4 +10,17 @@
     background-repeat: no-repeat;
     color: white;
   }
-  
+   .card-img-top{
+    height:250px;
+    width:100%;
+ }
+
+
+.card-deck{
+    margin-bottom: 15px;
+}
+.card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 2fr));
+    grid-gap: .6rem;
+}

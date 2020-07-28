@@ -43,14 +43,14 @@
 
 <!-- Page Content -->
 <section class="py-5">
-  <div class="container">
+  <div class="container" >
 
  
 <h1 > List of books </h1>
 
-<div class="container">
 
 <div id="#books" class="card-deck">
+
     <% @books.each do |book| %>
         <img class="card-img-top" src= "<%=book.url%>" alt="Card image"> 
         <div class="card-body">
@@ -58,11 +58,61 @@
             <p class="card-text"> <%= book.description%></p>
        </div>
     <% end %>
-</div>
+
+
 </div>
     </div>
 </section>
 
+<!-- Footer -->
+<footer class="page-footer font-small teal pt-4">
 
+  <!-- Footer Text -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold">Books as history</h5>
+        <p>People usually think of books in terms of their contents, their texts, with less thought for books as artefacts.
+         In fact books may possess all kinds of potentially interesting qualities beyond their texts, as designed or artistic objects, 
+         or because they have unique properties deriving from the ways they have been printed, bound, annotated, beautified or defaced.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mb-md-0 mb-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold">The importance of books</h5>
+        <p>Books play a significant role in our life. They say that “When you open a book, you open a new world”. 
+        I believe that everyone would agree with this statement as books have become inevitable to mankind.
+         For the majority of people, books are part of their everyday life.  
+        A book is like a best friend who will never walk away from you.</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Text -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Bicu Daniel:
+    <a href="https://github.com/daniel-bicu/BookShop-/tree/master/BookShop"> Github</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 
   
