@@ -1,10 +1,23 @@
 class BooksController < ApplicationController
+  before_action :all, only: [:index, :search]
   def index
-    @books = Book.all
   end
 
   def show
-    @book = Book.find(params[:name])
+    @price_precision = params[:price_precision]
+    
+    @price = params[:value]
+    @genre = params[:genre]
+
+    if@price_precision == "min"
+    
+    @books = Book.all.where(genre: @genre).where("price > ?", @price)
+
+    else 
+    
+    @books = Book.all.where(genre: @genre).where("price < ?", @price)
+
+    end
   end
 
   def new
@@ -14,6 +27,13 @@ class BooksController < ApplicationController
   end
   
   def add
+  end
+
+  def search
+  end
+
+  def all
+    @books = Book.all
   end
 
 end

@@ -1,2 +1,29 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<%= stylesheet_link_tag 'books' %>
+<h1> You are looking for books with genre: <%=@genre%> </h1>
+<h1> Price value <%=@price%> custom with option: <%=@price_precision%> </h1>
+<h2> For a moment, all we have are these books: </h2>
+
+<div class="container">
+<div id="#books" class="card-deck">
+
+    <% @books.each do |book| %>
+        <img class="card-img-top" src= "<%=book.url%>" alt="Card image"> 
+        <div class="card-body">
+             <h5 class="card-title"> <%= book.name%> </h5>
+            <p class="card-text"> by <i><%=book.author%> </i><strong>Description: </strong> <%= book.description%> <br> <strong>Genre: <%=book.genre%></strong> </p>
+            <p class="card-text"><small class="text-muted">Price:<%=book.price%> </small></p>
+       </div>
+    <% end %>
+
+   
+
+  <% if @books.blank? then%>
+
+    <h5> We are so sorry, for a moment we don't have what are you looking for. See you later! </h5>
+<%end%>
+
+</div>
+<button> <%= link_to 'Back', :back %> back</button>   
+<%=button_to "Click here", books_index_path, method: :get%>
+</div>
+

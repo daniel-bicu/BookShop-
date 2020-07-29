@@ -19,7 +19,7 @@
           <a class="nav-link" href="#">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#books">Books by genres</a>
+          <a class="nav-link" href="#books">Search for books by genre</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
@@ -55,7 +55,8 @@
         <img class="card-img-top" src= "<%=book.url%>" alt="Card image"> 
         <div class="card-body">
              <h5 class="card-title"> <%= book.name%> </h5>
-            <p class="card-text"> <%= book.description%></p>
+            <p class="card-text"> by <i><%=book.author%> </i><strong>Description: </strong> <%= book.description%> <br> <strong>Genre: <%=book.genre%></strong> </p>
+            <p class="card-text"><small class="text-muted">Price:<%=book.price%> </small></p>
        </div>
     <% end %>
 
